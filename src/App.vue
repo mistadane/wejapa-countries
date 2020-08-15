@@ -2,9 +2,9 @@
   <div id="app">
     <Header />
     <div class="main">
-      <div class="country-grid">
+      <div class="country-main">
         <Countries />
-        <CountryInfo />
+        
      </div>
     </div> 
   </div>
@@ -14,14 +14,14 @@
 
 import Header from './components/Header';
 import Countries from './components/Countries';
-import CountryInfo from './components/CountryInfo';
+
 
 export default {
   name: 'App',
   components: {
     Header,
     Countries,
-    CountryInfo
+    
   }
 }
 </script>
@@ -49,11 +49,7 @@ export default {
     height: 100vh;
   }
 
-  .country-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 50px;
-    max-width: 960px;
-    margin: 50px auto;
-  }
+  
+
+ 
 </style>

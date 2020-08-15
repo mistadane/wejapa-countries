@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+      <div class="contain">
         <form action="">
             <div>
                 <label for="countries">Country</label>
@@ -29,13 +30,29 @@
                 </div>
             </div>
         </form>
-        
+      </div>
+      <div class="contain">
+        <div class="option">
+          <h3>Selected Country</h3>
+          <p>{{ selectedCountry }}</p>
+        </div>
+        <div class="option">
+          <h3>Selected State</h3>
+          <p>{{ selectedState }}</p>
+        </div>
+        <div class="option">
+          <h3>Selected City</h3>
+          <p>{{ selectedCity }}</p>
+        </div>
+      </div>   
     </div>
 </template>
 
 <script>
+
 export default {
     name: "Countries",
+    
     data() {
         return {
             selectedCountry: "",
@@ -46,6 +63,7 @@ export default {
             cities: [],
         }
     },
+    
     
     mounted() {
         fetch("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries%2Bstates%2Bcities.json", {
@@ -85,17 +103,22 @@ export default {
         }
     }
     
-
 }
 </script>
 
 <style scoped>
     .container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .contain {
+        width: 100%;
         background: #fefefe;
         padding: 40px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        margin: 20px;
     }
-
     select {
         display: block;
         width: 100%;
@@ -104,18 +127,57 @@ export default {
         border: 1px solid #e2e8f0;;
         border-radius: 5px;
     }
-
     label {
         display: block;
         font-weight: 600;
         font-size: 20px;
         margin-bottom: 10px;
     }
-
     .empty {
         color: red;
         font-size: 12px;
         position: relative;
         top: -10px
     }
+
+    .option {
+      margin-bottom: 50px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #525569;
+        padding: 5px;
+    }
+
+    @media only screen and (max-width: 320px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        } 
+    }
+
+    @media only screen and (max-width: 375px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        } 
+    }
+
+    @media only screen and (max-width: 414px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        } 
+    }
+
+    @media only screen and (max-width: 768px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        } 
+    }
+
+    
 </style>
+
