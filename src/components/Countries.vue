@@ -135,7 +135,7 @@ export default {
     }
     .empty {
         color: red;
-        font-size: 12px;
+        font-size: 14px;
         position: relative;
         top: -10px
     }

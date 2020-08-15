@@ -47,6 +47,7 @@ export default {
     background: rgba(6, 7, 8, .7);
     padding: 50px;
     height: 100vh;
+    overflow: auto;
   }
 
   
