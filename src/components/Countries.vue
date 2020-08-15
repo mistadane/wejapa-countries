@@ -34,15 +34,15 @@
       <div class="contain">
         <div class="option">
           <h3>Selected Country</h3>
-          <p>{{ selectedCountry }}</p>
+          <p class="selected">{{ selectedCountry }}</p>
         </div>
         <div class="option">
           <h3>Selected State</h3>
-          <p>{{ selectedState }}</p>
+          <p class="selected">{{ selectedState }}</p>
         </div>
         <div class="option">
           <h3>Selected City</h3>
-          <p>{{ selectedCity }}</p>
+          <p class="selected">{{ selectedCity }}</p>
         </div>
       </div>   
     </div>
@@ -144,7 +144,7 @@ export default {
       margin-bottom: 50px;
     }
 
-    p {
+    .selected {
         font-size: 14px;
         color: #525569;
         padding: 5px;
